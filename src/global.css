@@ -1,0 +1,29 @@
+html,
+body,
+div,
+p,
+span {
+  /* 定义滚动滑块（thumb）样式 */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+p::-webkit-scrollbar,
+span::-webkit-scrollbar {
+  width: 10px;
+  /* 设置滚动条宽度 */
+  height: 6px;
+  /* 如果是垂直滚动条，也可以设置高度 */
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+p::-webkit-scrollbar-thumb,
+span::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 设置滑块的基本颜色，这里为半透明深灰色 */
+  border-radius: 6px;
+  /* 圆角以增加视觉友好度 */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  /* 添加内阴影以增强立体感 */
+}

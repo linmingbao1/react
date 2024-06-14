@@ -1,0 +1,12 @@
+.counter {
+  font-size: 20px;
+  font-weight: bold;
+}
+.con {
+  display: flex;
+  gap: 10px;
+}
+.input {
+  display: inline-block;
+  width: 100px !important;
+}

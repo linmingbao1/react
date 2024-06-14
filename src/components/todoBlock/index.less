@@ -1,0 +1,116 @@
+.case {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 34, 180);
+  display: flex;
+  align-items: center;
+  transition: all 2s;
+  gap: 20px;
+  position: relative;
+  &.done {
+    border-left: 8px solid rgba(0, 255, 30, 0.89);
+    opacity: 0.8;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   margin-left: -20px;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(255, 255, 255, 0.4);
+    //   border-radius: 10px;
+    //   display: block;
+    // }
+    .title,
+    .con,
+    .otherCon {
+      text-decoration: line-through;
+    }
+  }
+
+  .leftBox {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background-color: rgba(221, 221, 221, 0.616);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .rightBox {
+    flex: 1;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      color: rgb(240, 240, 240);
+      .title {
+        font-size: 20px;
+      }
+      .createTime {
+        font-size: 14px;
+      }
+    }
+    .middle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      .left {
+        flex: 1;
+        .con {
+          margin-bottom: 4px;
+          font-size: 18px;
+          color: #f0f0f0;
+        }
+        .otherCon {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+          font-size: 14px;
+          color: #f0f0f0;
+        }
+      }
+      .tool {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    .bottom {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #f0f0f0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .tag {
+        display: inline-block;
+        padding: 0 20px;
+        text-align: center;
+        height: 24px;
+        line-height: 22px;
+        border-radius: 15px;
+        background-color: rgb(36, 142, 255);
+        font-weight: 700;
+      }
+    }
+  }
+}

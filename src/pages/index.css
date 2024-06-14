@@ -1,0 +1,7 @@
+.buttonList {
+  display: flex;
+  gap: 10px;
+}
+.buttonList .margin {
+  margin-right: 10px;
+}

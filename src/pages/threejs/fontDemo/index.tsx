@@ -24,8 +24,10 @@ const FontDemo = () => {
       bevelSize: 8,
       bevelSegments: 5,
     });
-    // geometry.computeBoundingBox();
-    const material = new THREE.MeshPhongMaterial();
+    geometry.computeBoundingBox();
+    const material = new THREE.MeshBasicMaterial({
+      // color: 0xffffff,
+    });
     const mesh = new THREE.Mesh(geometry, material);
 
     mesh.position.set(0, 0, 0);

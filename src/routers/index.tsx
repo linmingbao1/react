@@ -37,6 +37,11 @@ const routers = [
         component: '@/pages/threejs/3DDemo/index.tsx',
         name: '3DDemo',
       },
+      {
+        path: '/threejs/listDemo',
+        component: '@/pages/threejs/listDemo/index.tsx',
+        name: 'listDemo',
+      },
     ],
   },
 ];

@@ -5,32 +5,38 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 const FontDemo = () => {
   const domRef = useRef<HTMLDivElement>(null);
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, 1 / 1, 0.1, 1000);
-  camera.position.set(100, 100, 100);
+  const camera = new THREE.PerspectiveCamera(75, 1 / 1, 0.1, 500);
+  camera.position.set(200, 200, 400);
   camera.lookAt(0, 0, 0);
+  // 坐标系
+  const axesHelper = new THREE.AxesHelper(450);
+  scene.add(axesHelper);
+
+  // 光源
+  const pointLight = new THREE.PointLight(0xffffff, 50000.0);
+  pointLight.position.set(200, 200, 200);
+  scene.add(pointLight);
+
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(500, 500);
   const loader = new FontLoader();
-  loader.load('/font2.json', function (font) {
-    console.log(font);
-
-    const geometry = new TextGeometry('Hello three.js!', {
+  loader.load('/font/font2.json', function (font) {
+    const geometry = new TextGeometry('H e l l o !', {
       font: font,
-      size: 80,
-      depth: 5,
+      size: 40,
+      depth: 30,
       curveSegments: 12,
       bevelEnabled: true,
       bevelThickness: 10,
       bevelSize: 8,
       bevelSegments: 5,
     });
-    geometry.computeBoundingBox();
-    const material = new THREE.MeshBasicMaterial({
+    const material = new THREE.MeshLambertMaterial({
       // color: 0xffffff,
     });
     const mesh = new THREE.Mesh(geometry, material);
 
-    mesh.position.set(0, 0, 0);
+    mesh.position.set(10, 10, 0);
     scene.add(mesh);
     renderer.render(scene, camera);
   });

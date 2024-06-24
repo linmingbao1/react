@@ -18,6 +18,10 @@ const ThreeJs = () => {
       name: '3DDemo',
       url: '/threejs/3DDemo',
     },
+    {
+      name: '循环Demo',
+      url: '/threejs/listDemo',
+    },
   ];
   return (
     <div>

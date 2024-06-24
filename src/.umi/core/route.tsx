@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/","name":"首页","parentId":"@@/global-layout","id":"1"},"2":{"path":"/docs","name":"文档","parentId":"@@/global-layout","id":"2"},"3":{"path":"/demo1","name":"demo1","parentId":"@@/global-layout","id":"3"},"4":{"path":"/storeDemo","name":"storeDemo","parentId":"@@/global-layout","id":"4"},"5":{"path":"/todoList","name":"todoList","parentId":"@@/global-layout","id":"5"},"6":{"path":"/threejs","name":"Threejs","parentId":"@@/global-layout","id":"6"},"7":{"path":"/threejs/basicDemo","name":"basicDemo","parentId":"6","id":"7"},"8":{"path":"/threejs/lineDemo","name":"lineDemo","parentId":"6","id":"8"},"9":{"path":"/threejs/fontDemo","name":"fontDemo","parentId":"6","id":"9"},"10":{"path":"/threejs/3DDemo","name":"3DDemo","parentId":"6","id":"10"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","name":"首页","parentId":"@@/global-layout","id":"1"},"2":{"path":"/docs","name":"文档","parentId":"@@/global-layout","id":"2"},"3":{"path":"/demo1","name":"demo1","parentId":"@@/global-layout","id":"3"},"4":{"path":"/storeDemo","name":"storeDemo","parentId":"@@/global-layout","id":"4"},"5":{"path":"/todoList","name":"todoList","parentId":"@@/global-layout","id":"5"},"6":{"path":"/threejs","name":"Threejs","parentId":"@@/global-layout","id":"6"},"7":{"path":"/threejs/basicDemo","name":"basicDemo","parentId":"6","id":"7"},"8":{"path":"/threejs/lineDemo","name":"lineDemo","parentId":"6","id":"8"},"9":{"path":"/threejs/fontDemo","name":"fontDemo","parentId":"6","id":"9"},"10":{"path":"/threejs/3DDemo","name":"3DDemo","parentId":"6","id":"10"},"11":{"path":"/threejs/listDemo","name":"listDemo","parentId":"6","id":"11"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
@@ -18,6 +18,7 @@ export async function getRoutes() {
 '8': React.lazy(() => import(/* webpackChunkName: "p__threejs__lineDemo__index" */'@/pages/threejs/lineDemo/index.tsx')),
 '9': React.lazy(() => import(/* webpackChunkName: "p__threejs__fontDemo__index" */'@/pages/threejs/fontDemo/index.tsx')),
 '10': React.lazy(() => import(/* webpackChunkName: "p__threejs__3DDemo__index" */'@/pages/threejs/3DDemo/index.tsx')),
+'11': React.lazy(() => import(/* webpackChunkName: "p__threejs__listDemo__index" */'@/pages/threejs/listDemo/index.tsx')),
 '@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'I:/React学习/myapp/src/layouts/index.tsx')),
 },
   };

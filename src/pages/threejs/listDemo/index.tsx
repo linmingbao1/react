@@ -31,7 +31,7 @@ const ListDemo = () => {
       // renderer.render(scene, camera);
     }
   }
-
+  const geoMetry2 = new THREE.ConeGeometry(9, 9, 10);
   const material2 = new THREE.MeshPhongMaterial({
     color: 0xff0000,
     shininess: 20, //高光部分的亮度，默认30
@@ -39,7 +39,7 @@ const ListDemo = () => {
   });
   for (let j = 0; j <= 3; j++) {
     for (let i = j + 1; i <= 4; i++) {
-      const mesh = new THREE.Mesh(geoMetry, material2);
+      const mesh = new THREE.Mesh(geoMetry2, material2);
       mesh.position.set(i * 20, j * 20, 0);
       scene.add(mesh);
       // renderer.render(scene, camera);

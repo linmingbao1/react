@@ -42,7 +42,37 @@ const routers = [
         component: '@/pages/threejs/listDemo/index.tsx',
         name: 'listDemo',
       },
+      {
+        path: '/threejs/guiDemo',
+        component: '@/pages/threejs/guiDemo/index.tsx',
+        name: 'guiDemo',
+      },
+      {
+        path: '/threejs/geoDemo',
+        component: '@/pages/threejs/geoDemo/index.tsx',
+        name: 'geoDemo',
+      },
+      {
+        path: '/threejs/modelDemo',
+        component: '@/pages/threejs/modelDemo/index.tsx',
+        name: 'modelDemo',
+      },
+      {
+        path: '/threejs/groupDemo',
+        component: '@/pages/threejs/groupDemo/index.tsx',
+        name: 'groupDemo',
+      },
+      {
+        path: '/threejs/texturesDemo',
+        component: '@/pages/threejs/texturesDemo/index.tsx',
+        name: 'texturesDemo',
+      },
     ],
+  },
+  {
+    path: '/leetCode',
+    component: '@/pages/leetCode/index.tsx',
+    name: 'leetCode',
   },
 ];
 

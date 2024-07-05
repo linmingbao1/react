@@ -29,6 +29,10 @@ export default function Layout() {
           <li>
             <Link to="/threejs">three.js</Link>
           </li>
+
+          <li>
+            <Link to="/leetCode">leetCode</Link>
+          </li>
         </ul>
         <Outlet />
       </div>

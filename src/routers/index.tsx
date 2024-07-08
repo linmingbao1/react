@@ -67,6 +67,11 @@ const routers = [
         component: '@/pages/threejs/texturesDemo/index.tsx',
         name: 'texturesDemo',
       },
+      {
+        path: '/threejs/PBRDemo',
+        component: '@/pages/threejs/PBRDemo/index.tsx',
+        name: 'PBRDemo',
+      },
     ],
   },
   {

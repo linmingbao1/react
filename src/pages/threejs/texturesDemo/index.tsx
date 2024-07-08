@@ -19,7 +19,7 @@ const ModelDemo = () => {
 
   const texLoader = new THREE.TextureLoader();
   // .load()方法加载图像，返回一个纹理对象Texture
-  const texture = texLoader.load('/img/gar.png');
+  const texture = texLoader.load('/img/liuying.png');
 
   // const geometry = new THREE.IcosahedronGeometry(10, 1);
   const geometry = new THREE.PlaneGeometry(200, 100); //矩形
@@ -28,9 +28,9 @@ const ModelDemo = () => {
   texture.offset.x += 0.1;
   texture.offset.y += 0.1;
 
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(4, 4);
+  // texture.wrapS = THREE.RepeatWrapping;
+  // texture.wrapT = THREE.RepeatWrapping;
+  // texture.repeat.set(4, 4);
   const material = new THREE.MeshBasicMaterial({
     color: 0x84f0d6,
     map: texture,

@@ -42,6 +42,10 @@ const ThreeJs = () => {
       name: '纹理贴图',
       url: '/threejs/texturesDemo',
     },
+    {
+      name: 'PBR材质',
+      url: '/threejs/PBRDemo',
+    },
   ];
   return (
     <div>

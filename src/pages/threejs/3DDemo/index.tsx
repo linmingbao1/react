@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import Stats from 'three/addons/libs/stats.module.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-const FontDemo = () => {
+const ThreeDDemo = () => {
   const stats = new Stats();
   stats.showPanel(0);
   const domRef = useRef<HTMLDivElement>(null);
@@ -24,10 +24,34 @@ const FontDemo = () => {
   const dirLightHelper = new THREE.PointLight(pointLight, 5, 0xff0000);
   scene.add(dirLightHelper);
   let mesh;
+
+  const texLoader = new THREE.TextureLoader();
+  const texture = texLoader.load('/img/liuying.png');
+
+  texture.colorSpace = THREE.sRGBEncoding; //和渲染器.outputEncoding一样值
   const loader = new GLTFLoader();
-  loader.load('/model/shiba/scene.gltf', function (gltf) {
-    console.log(gltf);
-    // mesh = gltf.scene.children[0];
+  loader.load('/model/miyu.glb', function (gltf) {
+    console.log(gltf.scene);
+    // 遍历修改模型材质
+    gltf.scene.traverse((obj) => {
+      if (obj.isMesh) {
+        // console.log('模型节点', obj);
+        // obj.material.map = texture;
+        // console.log('模型节点材质', obj.material);
+        // pointLight.intensity = 20000;
+        // obj.material = new THREE.MeshPhysicalMaterial({
+        //   color: 0xffffff,
+        // });
+        //  查看模型材质贴图
+        // if (obj.material.map) {
+        //   console.log('encoding', obj.material.map.encoding);
+        // }
+      }
+    });
+
+    mesh = gltf.scene.children[0];
+    console.log(mesh.material);
+
     scene.add(gltf.scene);
     animate();
   });
@@ -39,7 +63,7 @@ const FontDemo = () => {
     // if (mesh) {
     //   mesh.rotateY(0.01);
     // }
-    // requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
   }
 
   useEffect(() => {
@@ -56,4 +80,4 @@ const FontDemo = () => {
     </>
   );
 };
-export default FontDemo;
+export default ThreeDDemo;

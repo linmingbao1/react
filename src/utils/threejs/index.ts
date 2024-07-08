@@ -13,7 +13,7 @@ export function init() {
   scene.add(axesHelper);
   // 光源
   //AmbientLight 环境光 PointLight 点光源  DirectionalLight 平行光   
-  const pointLight = new THREE.PointLight(0xffffff, 2000.0);
+  const pointLight = new THREE.AmbientLight(0x02f2aa);
   pointLight.position.set(100, 100, 100);
   scene.add(pointLight);
   // 渲染器
